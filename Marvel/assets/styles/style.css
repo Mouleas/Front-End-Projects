@@ -1,4 +1,171 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.body {
     background-image: url("../images/background.jpg");
+    font-family: 'Bruno Ace SC', cursive;
+    animation: fade 1s linear;
+}
+.map-body {
+    background-image: url("../images/galaxy.gif");
+    animation: fade 1s linear; 
 }
 
+.Map-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.stoneDetails {
+    position: relative;
+    overflow-y: scroll;
+}
+.stoneDetails p {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 0; 
+    display: none; 
+    font-size: 10px;
+    animation: fade 0.4s linear;
+}
+.stoneDetails code {
+    font-size: 15px;
+    text-decoration: underline;
+}
+.stoneCard:hover p{
+    display: block;
+}
+.stoneCard:hover img {
+    opacity: 0.3;
+}
+
+
+#map {
+    padding: 0;
+    height: 300px;
+    width: 600px;
+    z-index: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.alertbox {
+    z-index: 1;
+    display: none;
+    border-radius: 10px;
+    margin-left: 26.5%;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(214, 51, 51);
+    position: absolute;
+    animation: fade 1s linear;
+}
+
+.alertbox .codered {
+    margin-top: 30px;
+    height: 100px;
+    width: 300px;
+}
+
+
+.ThanosMarker {
+    border-radius: 50%;
+}
+
+a {
+    display: inline-block;
+}
+
+.actions {
+    position: relative;
+    margin-top: 70px;
+}
+.actions .link{
+    margin-bottom: 20px;
+    border-style: solid;
+    text-decoration: none;
+    border-color: red;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: saturate(180%) blur(10px);
+    color: white;
+    padding: 20px;
+    letter-spacing: 2px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 0.5s linear;
+}
+
+.actions > a:hover {
+    background-color: red;
+}
+
+.Avengers-heading {
+    margin: 10px;
+    margin-left: 30px;
+    border-style: solid;
+    text-decoration: none;
+    border-color: red;
+    width: fit-content;
+    padding: 5px;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    backdrop-filter: saturate(180%) blur(10px);
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+#Avengers {
+    margin-left: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Avengers-card {
+    padding: 10px;
+    margin: 10px;
+    border-color: red;
+    border-style: solid;
+    background: rgba(0,0,0,0.5);
+    transition: 0.3s linear;
+    color: white;
+}
+.Avengers-cardImage {
+    transition: 0.3s linear;
+}
+
+.Avengers-cardImage:hover {
+    transform: scale3d(1.06,1.06,1.06);
+}
+
+.Avengers-card:hover{
+    transform: scale(1.05);
+}
+
+.Avengers-card:hover .card-title{
+    text-decoration: underline;
+}
+
+.Avengers-backButton a{
+    position: fixed;
+    z-index: 1;
+    top: 90%;
+    right: 30px;
+    padding: 5px;
+    border-style: solid;
+    text-decoration: none;
+    background-color: red;;
+    color: white;
+    letter-spacing: 2px;
+    transition: 0.3s linear;
+}
+
+.Avengers-backButton a:hover {
+    transform: skewX(-20deg);
+}
