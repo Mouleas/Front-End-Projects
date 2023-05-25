@@ -39,8 +39,22 @@
 .stoneCard:hover img {
     opacity: 0.3;
 }
+::-webkit-scrollbar {
+    width: 0px;
+}
 
+body,html {
+    height: 100%;
+}
 
+#loader {
+    background-image: url("../images/marvel-intro.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
 #map {
     padding: 0;
     height: 300px;

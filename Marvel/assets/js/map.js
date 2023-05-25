@@ -88,7 +88,9 @@ function alertBox(){
     setTimeout(() => {
         document.getElementById("alertbox").style.display = "block";
         document.getElementById("msg").innerHTML = msg;
-        document.getElementById("Map-container").style.display = "none";
+        document.getElementById("map").style.display = "none";
+        document.getElementById("backButton").style.display = "none";
+        document.getElementById("alertButton").style.display = "none";
     },3000);
     
 }
